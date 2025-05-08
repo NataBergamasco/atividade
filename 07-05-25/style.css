@@ -1,0 +1,60 @@
+/* Container principal para os cards */
+        .container {
+            display: flex;
+            /* Usar flexbox para estrutura lateral */
+            justify-content: center;
+            /* Centralizar os cards horizontalmente */
+            gap: 20px;
+            /* Espaçamento entre os cards */
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            /* Centralizar container na página */
+        }
+
+        /* Estilo base dos cards */
+        .card {
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            /* Ocupa espaço igual para ambos os cards */
+            max-width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Efeito hover para os cards para melhorar UI */
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Título do card */
+        .card h2 {
+            margin-top: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Parágrafo do card */
+        .card p {
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* Responsividade: empilhar os cards no celular */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                /* Empilhar verticalmente */
+                gap: 15px;
+                /* Espaçamento menor entre os cards */
+                padding: 15px;
+            }
+
+            .card {
+                max-width: 100%;
+                /* Ocupa toda a largura disponível */
+            }
+        }
